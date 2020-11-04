@@ -1,10 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { v4 as uuid } from "uuid";
-
-export interface User {
-    id?: string;
-    name: string;
-}
+import { User } from "../../data/user";
 
 /**
  * Service for managing all deper interaction with user data.

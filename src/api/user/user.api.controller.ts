@@ -9,7 +9,8 @@ import {
     Post,
     Put
 } from "@nestjs/common";
-import { UserApiService, User } from "./user.api.service";
+import { User } from "../../data/user";
+import { UserApiService } from "./user.api.service";
 
 /**
  * Controller for managing requests to "/api/v1/user".
