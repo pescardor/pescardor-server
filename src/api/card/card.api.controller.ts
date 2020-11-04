@@ -1,4 +1,5 @@
 import { Controller, Get } from "@nestjs/common";
+import { Card } from "../../data/card";
 import { CardApiService } from "./card.api.service";
 
 /**
@@ -12,12 +13,13 @@ export class CardApiController {
         this.cardApiService = cardApiService;
     }
 
-
     /**
      * Get all cards in the system, that the user has access to.
      */
     @Get("/")
-    public async getAllCards(): Promise<any[]> {
-
+    public async getAllCards(): Promise<Card[]> {
+        // TODO lome: Add user contraint
+        const cards = await this.cardApiService.getAllCards();
+        return cards;
     }
 }
