@@ -16,7 +16,11 @@ import { UserApiService, User } from "./user.api.service";
  */
 @Controller()
 export class UserApiController {
-    public constructor(private readonly userApiService: UserApiService) {}
+    private readonly userApiService: UserApiService;
+
+    public constructor(userApiService: UserApiService) {
+        this.userApiService = userApiService;
+    }
 
     /**
      * Get all users in the system.

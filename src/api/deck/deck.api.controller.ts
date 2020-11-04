@@ -3,5 +3,9 @@ import { DeckApiService } from "./deck.api.service";
 
 @Controller()
 export class DeckApiController {
-    public constructor(private readonly deckApiService: DeckApiService) {}
+    private readonly deckApiService: DeckApiService;
+
+    public constructor(deckApiService: DeckApiService) {
+        this.deckApiService = deckApiService;
+    }
 }

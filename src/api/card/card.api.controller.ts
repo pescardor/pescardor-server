@@ -3,5 +3,9 @@ import { CardApiService } from "./card.api.service";
 
 @Controller()
 export class CardApiController {
-    public constructor(private readonly cardApiService: CardApiService) {}
+    private readonly cardApiService: CardApiService;
+
+    public constructor(cardApiService: CardApiService) {
+        this.cardApiService = cardApiService;
+    }
 }
